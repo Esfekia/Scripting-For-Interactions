@@ -7,12 +7,12 @@
             "actions": [
                 {
                     "name": "CameraLook",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "77ac5d4c-c279-48bd-a559-8a44c44a0f97",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "PlayerMove",
@@ -28,10 +28,10 @@
                 {
                     "name": "",
                     "id": "338ceb99-7fd9-4624-8512-17364939a964",
-                    "path": "",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard and Mouse",
                     "action": "CameraLook",
                     "isComposite": false,
                     "isPartOfComposite": false

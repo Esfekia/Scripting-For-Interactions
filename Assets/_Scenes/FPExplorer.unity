@@ -17845,6 +17845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2023141996}
   - component: {fileID: 2023141997}
+  - component: {fileID: 2023141998}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -17895,10 +17896,22 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keyboard and Mouse
   m_DefaultActionMap: Gameplay Controls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2023141998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023141995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc542b25826d9ce428579848cd78ec70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2026488844
 PrefabInstance:
   m_ObjectHideFlags: 0
