@@ -44,7 +44,10 @@ public class FirstPersonCamera : MonoBehaviour
     //OnCameraLook event handler
     public void OnCameraLook(InputValue value)
     {
-        // write code to handle the event.
+        // Reading the mouse deltas as a vector2 (deltaX/deltaY)
+        Vector2 inputVector = value.Get<Vector2>();
+        deltaX = inputVector.x;
+        deltaY = inputVector.y;
     }
 }
 
