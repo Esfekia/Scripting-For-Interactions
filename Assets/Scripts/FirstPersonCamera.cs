@@ -16,6 +16,9 @@ public class FirstPersonCamera : MonoBehaviour
     public float xRot; //Rotation around the x-axis in degrees
     public float yRot; //Rotation around the y-axis in degrees
 
+    // Container variable for sensitivity
+    public Vector2 sensitivity;
+
 
     
     // Start is called before the first frame update
@@ -30,8 +33,8 @@ public class FirstPersonCamera : MonoBehaviour
     void Update()
     {
         // Keep track of player's x and y rotation
-        yRot += deltaX;
-        xRot -= deltaY;
+        yRot += deltaX * Time.deltaTime;
+        xRot -= deltaY * Time.deltaTime;
 
         // Clamp x-rotation so they cannot rotate all the way to back:
         xRot = Mathf.Clamp(xRot, -90f, 90f);
@@ -45,7 +48,7 @@ public class FirstPersonCamera : MonoBehaviour
     public void OnCameraLook(InputValue value)
     {
         // Reading the mouse deltas as a vector2 (deltaX/deltaY)
-        Vector2 inputVector = value.Get<Vector2>();
+        Vector2 inputVector = value.Get<Vector2>() * sensitivity;
         deltaX = inputVector.x;
         deltaY = inputVector.y;
     }
