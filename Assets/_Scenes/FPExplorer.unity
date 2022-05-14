@@ -9330,7 +9330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementAxis: {x: 1, y: 0, z: 0}
-  distance: 0.5
+  distance: 5
   frames: 0
 --- !u!1 &1114289815
 GameObject:
@@ -18350,8 +18350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bdccd4f07477848a3cb756503b67a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementAxis: {x: 1, y: 0, z: 0}
-  distance: 0.5
+  movementAxis: {x: -1, y: 0, z: 0}
+  distance: 5
   frames: 0
 --- !u!1 &2057750425
 GameObject:

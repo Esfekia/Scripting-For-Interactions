@@ -10,7 +10,7 @@ public class GateBehavior : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player has entered trigger zone.");
+            gameObject.BroadcastMessage("OpenGate");
         }
         
     }
@@ -20,7 +20,7 @@ public class GateBehavior : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player has exited trigger zone.");
+            gameObject.BroadcastMessage("CloseGate");
         }
     }
 
