@@ -7331,6 +7331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 887647732}
   - component: {fileID: 887647733}
+  - component: {fileID: 887647734}
   m_Layer: 0
   m_Name: Gate 1
   m_TagString: Untagged
@@ -7367,6 +7368,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.01834275, z: 0.22725521}
   m_Center: {x: -4.1995626e-12, y: 0.009171398, z: -0.0012055378}
+--- !u!114 &887647734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887647731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010fc6cde877a7c47a3f480d386510ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &900403191
 GameObject:
   m_ObjectHideFlags: 0
@@ -9221,6 +9234,7 @@ GameObject:
   - component: {fileID: 1109930840}
   - component: {fileID: 1109930839}
   - component: {fileID: 1109930838}
+  - component: {fileID: 1109930842}
   m_Layer: 0
   m_Name: Right Door
   m_TagString: Untagged
@@ -9303,6 +9317,21 @@ Transform:
   m_Father: {fileID: 887647732}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -170.065}
+--- !u!114 &1109930842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109930837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bdccd4f07477848a3cb756503b67a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementAxis: {x: 1, y: 0, z: 0}
+  distance: 0.5
+  frames: 0
 --- !u!1 &1114289815
 GameObject:
   m_ObjectHideFlags: 0
@@ -18226,6 +18255,7 @@ GameObject:
   - component: {fileID: 2057447205}
   - component: {fileID: 2057447204}
   - component: {fileID: 2057447203}
+  - component: {fileID: 2057447207}
   m_Layer: 0
   m_Name: Left Door
   m_TagString: Untagged
@@ -18308,6 +18338,21 @@ Transform:
   m_Father: {fileID: 887647732}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -170.065}
+--- !u!114 &2057447207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057447202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bdccd4f07477848a3cb756503b67a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementAxis: {x: 1, y: 0, z: 0}
+  distance: 0.5
+  frames: 0
 --- !u!1 &2057750425
 GameObject:
   m_ObjectHideFlags: 0
