@@ -17847,6 +17847,7 @@ GameObject:
   - component: {fileID: 2023141997}
   - component: {fileID: 2023141998}
   - component: {fileID: 2023141999}
+  - component: {fileID: 2023142000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -17862,7 +17863,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023141995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.829, y: -0.515, z: -65.667}
+  m_LocalPosition: {x: 31.829, y: -0.25, z: -65.667}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1742888875}
@@ -17918,7 +17919,7 @@ MonoBehaviour:
   deltaY: 0
   xRot: 0
   yRot: 0
-  sensitivity: {x: 10, y: 10}
+  sensitivity: {x: 8, y: 8}
 --- !u!114 &2023141999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17932,7 +17933,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
-  speed: 5
+  speed: 6
+--- !u!136 &2023142000
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023141995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.50530624
+  m_Height: 1.976718
+  m_Direction: 1
+  m_Center: {x: -1.9416313, y: 1.8902702, z: -0.36082458}
 --- !u!1001 &2026488844
 PrefabInstance:
   m_ObjectHideFlags: 0
