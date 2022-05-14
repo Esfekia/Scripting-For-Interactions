@@ -13,7 +13,7 @@ public class DoorBehavior : MonoBehaviour
     private Vector3 closedPos;
 
     //the amount of frames the door open animation should take
-    public float frames;
+    public float frames= 1.0f;
 
     private void Start()
     {
@@ -25,35 +25,38 @@ public class DoorBehavior : MonoBehaviour
     public void CloseGate()
     {
         //Without Coroutines
-        transform.Translate(movementAxis * distance * -1f, Space.World);
+        //transform.Translate(movementAxis * distance * -1f, Space.World);
 
         //Basic Coroutine in Frames
-        //StartCoroutine(DoorMove(openPos, closedPos, 1 / frames)); //door glitches out
+        StartCoroutine(DoorMove(openPos, closedPos, 1/frames)); //door glitches out
 
         //Fix door jump glitch by stopping already running coroutines and startin from current position
-        StopAllCoroutines(); //add to stop previously running coroutines
-        StartCoroutine(DoorMove(transform.position, closedPos, 1 / frames)); //What's the bug here, can you solve it?
+        //StopAllCoroutines(); //add to stop previously running coroutines
+        //StartCoroutine(DoorMove(transform.position, closedPos, 1/frames)); //What's the bug here, can you solve it?
     }
 
     public void OpenGate()
     {
         //Without Coroutines
-        transform.Translate(movementAxis * distance, Space.World);
+        //transform.Translate(movementAxis * distance, Space.World);
 
         //Basic Coroutine in Frames
-        //StartCoroutine(DoorMove(closedPos, openPos, 1 / frames)); //door glitches out
+        StartCoroutine(DoorMove(closedPos, openPos, 1/frames));
 
         //Fix door jump glitch by stopping already running coroutines and startin from current position
-        StopAllCoroutines();
-        StartCoroutine(DoorMove(transform.position, openPos, 1 / frames)); //What's the bug here, can you solve it?
+        // StopAllCoroutines();
+        // StartCoroutine(DoorMove(transform.position, openPos, 1 / frames)); //What's the bug here, can you solve it?
     }
 
-    IEnumerator DoorMove(Vector3 startPos, Vector3 endPos, float step)
+       
+    public IEnumerator DoorMove(Vector3 startPos, Vector3 endPos, float step)
     {
         for(float i = 0; i <= 1f; i += step)
         {
             Vector3 newPos = Vector3.Lerp(startPos, endPos, i);
             transform.position = newPos;
+
+            //makes the coroutine pause until the next frame
             yield return null;
         }
     }
