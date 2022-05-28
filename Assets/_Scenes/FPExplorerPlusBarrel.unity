@@ -10587,8 +10587,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focusedObject: {fileID: 0}
-  pickupSlot: {fileID: 0}
-  InteractDistance: 0
+  pickupSlot: {fileID: 2033186888}
+  InteractDistance: 10
   holding: 0
 --- !u!1001 &1312727543
 PrefabInstance:
@@ -13493,6 +13493,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3421839578372199538, guid: a03eebc3fce97774fa6ddf8412d5a322,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a03eebc3fce97774fa6ddf8412d5a322, type: 3}

@@ -47,6 +47,32 @@ public class InteractionSystem : MonoBehaviour
 
     public void onInteract()
     {
+        // if we are holding something and we hit E, then we should drop it
+        //(below is cimplete opposite of the not holding part underneath. read that to understand it first.)
+        if (holding)
+        {
+            // drop what we are holding
+            // separate from parent
+            focusedObject.transform.parent = null;
+            // make it not kinematic
+            focusedObject.GetComponent<Rigidbody>().isKinematic = true;
+            // set holding false for the if / else if checks
+            holding = false;
+        }
+        // check if the focused item is interactable, and then pick it up.
+        // you can use other tags here for other actions. i.e. if door, open it, etc.
+        else if (focusedObject.CompareTag("Interactable"))
+        {
+            // pick up the barrel. make it pickupSlot's child and then set its position same as pickupSlot
+            focusedObject.transform.parent = pickupSlot.transform;
+            focusedObject.transform.position = pickupSlot.transform.position;
 
+            // ensure motion is not affected by physics and only by player moving around
+            focusedObject.GetComponent<Rigidbody>().isKinematic = true;
+
+            // set holding true for the if / else if checks
+            holding = true;
+        }
+         
     }
 }
