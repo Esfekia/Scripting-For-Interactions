@@ -11,7 +11,7 @@ public class InteractionSystem : MonoBehaviour
     public GameObject pickupSlot;
 
     // distance where player will be able to pick up things
-    public float InteractDistance;
+    public float interactDistance;
 
 
     // boolean to see if player is holding something, this will affect what interact will do.
@@ -55,7 +55,7 @@ public class InteractionSystem : MonoBehaviour
             // separate from parent
             focusedObject.transform.parent = null;
             // make it not kinematic
-            focusedObject.GetComponent<Rigidbody>().isKinematic = true;
+            focusedObject.GetComponent<Rigidbody>().isKinematic = false;
             // set holding false for the if / else if checks
             holding = false;
         }
