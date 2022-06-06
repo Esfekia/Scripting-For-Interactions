@@ -14,6 +14,7 @@ public class JumpPadBehavior : MonoBehaviour
             Rigidbody playerRb = other.GetComponent<Rigidbody>();
 
             playerRb.AddForce(other.transform.up * jumpForce, ForceMode.Impulse);
+            Debug.Log("entered!");
         }
     }
 
